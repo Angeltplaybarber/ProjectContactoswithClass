@@ -25,27 +25,35 @@ while (running)
     Console.WriteLine("6. Salir");
     Console.Write("Elige una opción: ");
 
-    int choice = Convert.ToInt32(Console.ReadLine());
+    string choice = Console.ReadLine(); 
 
-    switch (choice)
-    {
-        case 1:
+    switch (choice){ // Debe ser string para manejar mejor esta situacion
+        case "1":
             AddContact(contacts);
             break;
-        case 2:
+        case "2":
             ViewContacts(contacts);
             break;
-        case 3: //esto es intencional, no importa el orden en que pongan los cases, pero, traten de ser siempre lo mas ordenados posible
+        case "3":{//esto es intencional, no importa el orden en que pongan los cases, pero, traten de ser siempre lo mas ordenados posible
                 // Comentario de Angel (De todas maneras dejare el comentario y lo organizare para mejor legibilidad)
-            SearchContact(contacts);
+                if(contacts.Any()){
+                    SearchContact(contacts);
+
+                }else{
+                Console.WriteLine($"Disculpa pero no hay ningun registro");
+                Console.WriteLine("Porfavor inserte uno");
+
+                }
+                }   
             break;
-        case 4:
+        case "4":
             EditContact(contacts);
             break;
-        case 5:
+        case "5":
             DeleteContact(contacts);
             break;
-        case 6:
+        case "6":
+            Console.WriteLine("Muchas gracias pase buenas!");
             running = false;
             break;
         default:
@@ -94,7 +102,7 @@ static void ViewContacts(List<Contact> contacts)
 
     foreach (var item in contacts)  
     {
-         
+        
         Console.WriteLine($"{item.Id}           {item.Name}           {item.Lastname}           {item.Phone}           {item.Email}           {item.Address}");
         
     }
@@ -108,38 +116,38 @@ static void EditContact(List<Contact> contacts){
 
 
         if ((id == 0) && contacts.Contains(contacts[id])){
-            contacts.RemoveAt(id);
+            //contacts.RemoveAt(id);
 
             Console.WriteLine("Digite el nombre de la persona");
-            string name = Console.ReadLine();
+            contacts[id].Name = Console.ReadLine();
             Console.WriteLine("Digite el apellido de la persona");
-            string lastname = Console.ReadLine();
+            contacts[id].Lastname = Console.ReadLine();
             Console.WriteLine("Digite el telefono de la persona");
-            string phone = Console.ReadLine();
-            Console.WriteLine("Digite la dirección");
-            string address = Console.ReadLine();
+            contacts[id].Phone = Console.ReadLine();
             Console.WriteLine("Digite el correo electronico de la persona");
-            string email = Console.ReadLine();
+            contacts[id].Email = Console.ReadLine();
+            Console.WriteLine("Digite la dirección");
+            contacts[id].Address = Console.ReadLine();
 
-            contacts.Add(new Contact(id,name,lastname,phone,email,address));
+          
 
 
         }else if (id >= 1 && contacts.Contains(contacts[id - 1])){
             
-            contacts.RemoveAt(id - 1);
+            //contacts.RemoveAt(id - 1);
             
             Console.WriteLine("Digite el nombre de la persona");
-            string name = Console.ReadLine();
+            contacts[id].Name = Console.ReadLine();
             Console.WriteLine("Digite el apellido de la persona");
-            string lastname = Console.ReadLine();
+            contacts[id].Lastname = Console.ReadLine();
             Console.WriteLine("Digite el telefono de la persona");
-            string phone = Console.ReadLine();
-            Console.WriteLine("Digite la dirección");
-            string address = Console.ReadLine();
+            contacts[id].Phone = Console.ReadLine();
             Console.WriteLine("Digite el correo electronico de la persona");
-            string email = Console.ReadLine();
+            contacts[id].Email = Console.ReadLine();
+            Console.WriteLine("Digite la dirección");
+            contacts[id].Address = Console.ReadLine();
 
-            contacts.Add(new Contact(id,name,lastname,phone,email,address));
+           
             
         }else{
 
@@ -168,8 +176,11 @@ static void DeleteContact(List<Contact> contacts)
     int id = Convert.ToInt32(Console.ReadLine());
     if (id == 0){
     contacts.RemoveAt(id);
-    }else{
+    IdChange(id, contacts);
+
+    }else if(id >= 1){
     contacts.RemoveAt(id - 1);
+    IdChange(id, contacts);
 
     }
     Console.WriteLine("Este contacto ha sido eliminado correctamente");
@@ -182,8 +193,38 @@ static void SearchContact(List<Contact> contacts)
     int id = Convert.ToInt32(Console.ReadLine());
     
     
+    
+
+    if((id == 0) && id >= contacts.Count){
+        Console.WriteLine("Id           Nombre          Apellido           Telefono            Email           Dirección");
+        Console.WriteLine("______________________________________________________________________________________");
+        Console.WriteLine($"{contacts[id].Id}    {contacts[id].Name}    {contacts[id].Lastname}       {contacts[id].Phone}      {contacts[id].Email}     {contacts[id].Address}");
+    }else if(id >= 1 && id < contacts.Count()){
         Console.WriteLine("Id           Nombre          Apellido           Telefono            Email           Dirección");
         Console.WriteLine("______________________________________________________________________________________");
         Console.WriteLine($"{contacts[id - 1].Id}    {contacts[id - 1].Name}    {contacts[id - 1].Lastname}       {contacts[id - 1].Phone}      {contacts[id - 1].Email}     {contacts[id - 1].Address}");
+    }else{
+        Console.WriteLine($"Disculpa pero este contacto no existe o no tiene ese ID {id}");
+        Console.WriteLine("Porfavor intentelo de nuevo");
+    }
 
+
+}
+
+
+
+
+static void IdChange(int id,List<Contact> contacts){
+    
+
+    // Esto simplemente ordena los id de las listas
+    for(int IDcamb = 0; IDcamb < contacts.Count; IDcamb++){
+    if(id < 1 && IDcamb == 1){
+        contacts[IDcamb].Id = IDcamb + 1;
+
+    }else if(id >= 1){
+        contacts[IDcamb].Id = IDcamb + 1;
+        
+    }
+    }
 }

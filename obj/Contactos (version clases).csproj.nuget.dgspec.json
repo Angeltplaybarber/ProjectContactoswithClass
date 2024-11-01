@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\Contactos (version clases).csproj": {}
+    "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\ProjectContactoswithClass\\Contactos (version clases).csproj": {}
   },
   "projects": {
-    "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\Contactos (version clases).csproj": {
+    "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\ProjectContactoswithClass\\Contactos (version clases).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\Contactos (version clases).csproj",
+        "projectUniqueName": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\ProjectContactoswithClass\\Contactos (version clases).csproj",
         "projectName": "Contactos (version clases)",
-        "projectPath": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\Contactos (version clases).csproj",
+        "projectPath": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\ProjectContactoswithClass\\Contactos (version clases).csproj",
         "packagesPath": "C:\\Users\\laptop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\obj\\",
+        "outputPath": "C:\\Users\\laptop\\Documents\\C# Starling\\Contactos (version clases)\\ProjectContactoswithClass\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\laptop\\AppData\\Roaming\\NuGet\\NuGet.Config"
