@@ -1,0 +1,14 @@
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\bin\Debug\net8.0\Contactos (version clases).exe
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\bin\Debug\net8.0\Contactos (version clases).deps.json
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\bin\Debug\net8.0\Contactos (version clases).runtimeconfig.json
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\bin\Debug\net8.0\Contactos (version clases).dll
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\bin\Debug\net8.0\Contactos (version clases).pdb
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).AssemblyInfoInputs.cache
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).AssemblyInfo.cs
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).csproj.CoreCompileInputs.cache
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).dll
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\refint\Contactos (version clases).dll
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).pdb
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\Contactos (version clases).genruntimeconfig.cache
+C:\Users\laptop\Documents\C# Starling\Contactos (version clases)\obj\Debug\net8.0\ref\Contactos (version clases).dll
