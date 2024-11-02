@@ -11,6 +11,15 @@ namespace Contactos
 
     class Contact
     {
+        // Properties
+        public string Name {get; set; }
+        public string Lastname{get; set;}
+        public string Phone{get; set;}
+        public string Email{get; set;}
+        public string Address{get; set;}
+        public int Id{get; set;}
+        
+        //Contructor's
         public Contact(int id,string name,string lastname,string phone,string email,string address){
             Id  = id;
             Name = name;
@@ -28,13 +37,6 @@ namespace Contactos
             Address = address;
 
         }
-        // Properties
-        public string Name {get; set; }
-        public string Lastname{get; set;}
-        public string Phone{get; set;}
-        public string Email{get; set;}
-        public string Address{get; set;}
-        public int Id{get; set;}
 
        
     }
